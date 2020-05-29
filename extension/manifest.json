@@ -1,0 +1,29 @@
+{
+  "version": "0.0.1",
+  "author": "Ionut Achim <achimvionut@gmail.com>",
+  "name": "Immerx DevTools",
+  "short_name": "Immerx DevTools",
+  "description": "Immerx debugging tools in Chrome developer console.",
+  "icons": {
+    "16": "icons/icon-64.png",
+    "48": "icons/icon-128.png",
+    "128": "icons/icon-400.png"
+  },
+  "page_action": {},
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+  "permissions": ["tabs", "http://*/*", "https://*/*"],
+  "devtools_page": "devtools.html",
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "web_accessible_resources": ["panel.html"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["hook.js", "contentScript.js"],
+      "run_at": "document_start"
+    }
+  ],
+  "manifest_version": 2
+}

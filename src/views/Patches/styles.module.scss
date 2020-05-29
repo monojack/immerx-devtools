@@ -1,0 +1,49 @@
+$color: #fff;
+
+.view {
+  color: $color;
+
+  .patchList {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding: 0;
+    padding-bottom: 8px;
+    border-bottom: 1px solid transparentize($color: $color, $amount: 0.8);
+
+    .patch {
+      cursor: pointer;
+      user-select: none;
+      opacity: 0.5;
+      padding: 4px 8px;
+      border: 1px solid transparentize($color: $color, $amount: 0.5);
+      border-radius: 3px;
+      margin-right: 8px;
+      line-height: 1.2;
+
+      &.selected {
+        opacity: 1;
+      }
+
+      .op,
+      .path {
+        width: 100%;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
+
+      .op {
+        font-weight: bolder;
+        text-transform: uppercase;
+        display: block;
+      }
+
+      .path {
+        width: 100%;
+        font-size: smaller;
+        font-style: italic;
+      }
+    }
+  }
+}

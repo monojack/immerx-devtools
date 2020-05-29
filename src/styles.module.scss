@@ -1,0 +1,114 @@
+/*
+RESET
+*/
+
+html,
+body,
+body > div:global(#root) {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  font-family: 'Dank Mono', monospace;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-size: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+// _:default:not(:root:root),
+// body {
+//   letter-spacing: -1px;
+// }
+
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
+}
+
+*::before,
+*::after {
+  box-sizing: inherit;
+  // text-rendering: geometricPrecision;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.patchNav {
+  width: 15%;
+  min-width: 280px;
+  flex: none;
+  background-color: #363537;
+  padding: 16px 0;
+  overflow-y: auto;
+}
+
+.patchView {
+  padding: 16px;
+  flex: auto;
+  max-width: 85%;
+  overflow: hidden;
+}
+
+.view {
+  height: calc(100% - 52px);
+  overflow: auto;
+  padding: 24px 0 24px 24px;
+
+  > main {
+    width: max-content;
+  }
+}
+
+.viewDiff {
+  .heading {
+    color: #f7f1ff;
+    border-bottom: 1px solid #363537;
+    padding: 8px 0;
+  }
+
+  .removedJson {
+    > ol {
+      background-color: rgba(255, 0, 0, 0.07) !important;
+    }
+  }
+
+  .addedJson {
+    > ol {
+      background-color: rgba(0, 255, 0, 0.07) !important;
+    }
+  }
+
+  .removedPrim {
+    position: relative;
+    padding: 2px 8px;
+    border-radius: 4px;
+    min-width: 82px;
+    display: inline-block;
+    text-align: center;
+    background-color: rgba(255, 0, 0, 0.3);
+    color: #f7f1ff;
+    font-weight: 800;
+    text-decoration: line-through;
+  }
+
+  .fatArrow {
+    color: #f7f1ff;
+    font-weight: 900;
+    display: inline-block;
+  }
+
+  .addedPrim {
+    padding: 2px 8px;
+    border-radius: 4px;
+    min-width: 82px;
+    display: inline-block;
+    text-align: center;
+    background-color: rgba(0, 255, 0, 0.3);
+    color: #f7f1ff;
+    font-weight: 800;
+  }
+}

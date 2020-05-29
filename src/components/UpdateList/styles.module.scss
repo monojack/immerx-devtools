@@ -1,0 +1,74 @@
+$item-height: 52px;
+
+.updateList {
+  position: relative;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+
+  .update {
+    padding: 0;
+    margin: 0;
+    position: relative;
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+    justify-content: center;
+    color: #f7f1ff;
+    border-bottom: 1px solid #222222;
+    padding: 8px 16px;
+    width: 100%;
+    height: $item-height;
+    cursor: pointer;
+    transform: translateY(0);
+    transition: transform 0.14s 0.07s linear;
+
+    &:hover {
+      background-color: transparentize($color: #69676c, $amount: 0.64);
+    }
+
+    .indicator {
+      position: absolute;
+      width: 0;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background-color: #222222;
+      transition: width 0.07s ease-out;
+    }
+
+    .patchOp {
+      width: 100%;
+      font-weight: bolder;
+      display: block;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      z-index: 1;
+    }
+
+    .patchPath {
+      width: 100%;
+      font-size: smaller;
+      font-style: italic;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      z-index: 1;
+    }
+
+    &.active {
+      .indicator {
+        width: 100%;
+        transition: width 0.14s ease-out;
+      }
+    }
+
+    &:hover:not(.active) {
+      .indicator {
+        width: 10px;
+      }
+    }
+  }
+}

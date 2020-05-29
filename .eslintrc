@@ -1,0 +1,34 @@
+{
+  "env": {
+    "browser": true,
+    "commonjs": true,
+    "es6": true,
+    "node": true
+  },
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "sourceType": "module"
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+  "extends": ["standard", "standard-react", "plugin:prettier/recommended"],
+  "rules": {
+    "eqeqeq": "off",
+    "no-unused-expressions": "off",
+    "no-sequences": "off",
+    "react/jsx-curly-newline": "off",
+    "react/jsx-indent": "off",
+    "no-void": "off",
+    "react/prop-types": "off",
+    "camelcase": ["error", { "allow": ["^Symbol_"] }]
+  },
+  "globals": {
+    "chrome": true
+  }
+}

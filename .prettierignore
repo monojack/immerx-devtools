@@ -1,0 +1,8 @@
+node_modules
+public
+cjs
+esm
+umd
+dist
+pkg
+build
