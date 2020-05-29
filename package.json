@@ -2,7 +2,6 @@
   "name": "@immerx/devtools",
   "version": "0.1.0",
   "description": "DevTools middleware for Immer and Immerx",
-  "private": true,
   "main": "cjs/index.js",
   "module": "esm/index.js",
   "scripts": {
