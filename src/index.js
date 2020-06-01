@@ -41,7 +41,8 @@ function loadIframe(target) {
   `
 
   const script = doc.createElement('script')
-  script.src = 'https://unpkg.com/@immerx/devtools/umd/immerx-devtools.min.js'
+  script.src =
+    'https://unpkg.com/@immerx/devtools@latest/umd/immerx-devtools.min.js'
   doc.body.appendChild(script)
 
   const renderScript = doc.createElement('script')
