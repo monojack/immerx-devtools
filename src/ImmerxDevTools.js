@@ -108,7 +108,11 @@ export function ImmerxDevTools({ state$ }) {
             update={active}
           />
         ) : activeView === 'PATCHES' ? (
-          <PatchesView className={styles.view} patches={active?.patches} />
+          <PatchesView
+            className={styles.view}
+            update={active}
+            patches={active?.patches}
+          />
         ) : null}
       </main>
     </div>

@@ -12,12 +12,7 @@ const options = {
   expandLevel: 1,
 }
 
-export const DiffView = memo(function DiffView({
-  left,
-  right,
-  update,
-  className,
-}) {
+export const DiffView = memo(function DiffView({ update, className }) {
   const diff = useMemo(() => {
     if (update == null || !update.patches || update.patches.length === 0) {
       return { '*': customEntry(() => <span>(States are equal)</span>) }
