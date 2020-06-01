@@ -24,7 +24,7 @@ export function ImmerxDevTools({ state$ }) {
   const [state, setState] = useState({})
 
   const [active, setActive] = useState()
-  const [activeView, setActiveView] = useState('DIFF')
+  const [activeView, setActiveView] = useState('STATE')
 
   const toggleActiveUpdate = useCallback(function toggleActiveUpdate(update) {
     setActive(active => {
@@ -87,12 +87,12 @@ export function ImmerxDevTools({ state$ }) {
 
   return (
     <div style={{ ...defaultStyles, display: 'flex', height: '100%' }}>
-        <UpdateList
+      <UpdateList
         className={styles.updateList}
-          updates={allUpdates}
-          active={active}
-          onUpdateClick={toggleActiveUpdate}
-        />
+        updates={allUpdates}
+        active={active}
+        onUpdateClick={toggleActiveUpdate}
+      />
       <main className={styles.patchView}>
         <Header {...{ setActiveView, activeView }} />
         {activeView === 'STATE' ? (
