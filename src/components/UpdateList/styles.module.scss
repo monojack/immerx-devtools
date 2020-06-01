@@ -1,11 +1,61 @@
 $item-height: 52px;
 
+.nav {
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+}
+
+.updatesFilter {
+  padding: 0 8px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 8px;
+  flex: none;
+
+  .opToggle {
+    flex: 1;
+    padding: 4px;
+    flex-shrink: 0;
+    background: transparent;
+    appearance: none;
+    -webkit-appearance: none;
+    outline: none;
+    color: #fff;
+    border: 1px solid #222222;
+    cursor: pointer;
+    font-size: smaller;
+    text-transform: lowercase;
+
+    &.selected {
+      background-color: #222222;
+    }
+
+    &:not(:last-of-type) {
+      margin-right: 4px;
+    }
+  }
+  .pathInput {
+    flex: 3;
+    padding: 0 16px;
+    margin-top: 4px;
+    background-color: #222222;
+    color: #fff;
+    border: none;
+    line-height: 2.4;
+    outline: none;
+    font-style: italic;
+  }
+}
+
 .updateList {
   position: relative;
   list-style: none;
   padding: 0;
   margin: 0;
+  flex: auto;
   overflow: hidden;
+  overflow-y: auto;
 
   .update {
     padding: 0;

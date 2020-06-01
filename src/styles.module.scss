@@ -37,13 +37,13 @@ body {
   -webkit-tap-highlight-color: transparent;
 }
 
-.patchNav {
+.updateList {
   width: 15%;
   min-width: 280px;
   flex: none;
   background-color: #363537;
   padding: 16px 0;
-  overflow-y: auto;
+  overflow: hidden;
 }
 
 .patchView {

@@ -87,13 +87,12 @@ export function ImmerxDevTools({ state$ }) {
 
   return (
     <div style={{ ...defaultStyles, display: 'flex', height: '100%' }}>
-      <nav className={styles.patchNav}>
         <UpdateList
+        className={styles.updateList}
           updates={allUpdates}
           active={active}
           onUpdateClick={toggleActiveUpdate}
         />
-      </nav>
       <main className={styles.patchView}>
         <Header {...{ setActiveView, activeView }} />
         {activeView === 'STATE' ? (
