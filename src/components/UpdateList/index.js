@@ -47,7 +47,7 @@ export function UpdateList({
               {update.ops.join(' | ').toUpperCase() || <em>EMPTY!</em>}
             </div>
             <div className={styles.patchPath}>
-              {(update.commonPath || []).join('.') ||
+              {(update.commonPath || []).join(', ') ||
                 (update.ops.length > 0 ? '#' : '')}
             </div>
           </li>
