@@ -4,7 +4,7 @@
 
 <br/>
 
-<img src="images/state-screenshot-0.png" />
+<img src="images/extension-screenshot-0.png" />
 
 ### Install the Chrome DevTools Extension
 
