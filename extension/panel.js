@@ -38,7 +38,6 @@ ReactDOM.render(
 )
 
 function handleMessage(message) {
-  console.log('handleMessage -> message', message)
   state$ && state$.next(...message)
 }
 

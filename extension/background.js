@@ -12,7 +12,6 @@ setInterval(() => {
 chrome.runtime.onConnect.addListener(port => {
   const isTab = isTabPort(port)
   const tabId = isTab ? port.sender.tab.id : port.name
-  console.log('isTab', isTab, tabId)
 
   ports[tabId] = ports[tabId] || {}
 
@@ -51,8 +50,6 @@ function createChannel(tabId) {
   }
 
   function destroyChannel() {
-    console.log('destroyChannel -> destroyChannel')
-
     tab.onMessage.removeListener(handleMessage)
     tab.disconnect()
     panel && panel.disconnect()

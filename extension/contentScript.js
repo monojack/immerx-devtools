@@ -11,7 +11,6 @@ function sendMessage(event) {
 }
 
 function handleDisconnect() {
-  console.log('PORT DISCONNECTED', port)
   window.removeEventListener('message', sendMessage)
 }
 
