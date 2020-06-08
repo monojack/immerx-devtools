@@ -8,8 +8,9 @@
 
 ### Install the Chrome DevTools Extension
 
-For now, you can only install the extension manually. There is a review in process for adding it to the Chrome Web Store and I will update as soon as it's approved.
+From the **[Chrome Web Store](https://chrome.google.com/webstore/detail/immerx-devtools/jchcefekimgnfceonnnekpgmphepengp)**
 
+Or **manually**:
 1. Download the `devtools-extension.zip` file from the [releases page](https://github.com/monojack/immer-devtools/releases) and unzip it anywhere you like
 2. Navigate to `chrome://extensions` or from the menu - `More Tools -> Extensions`
 3. Enable `Developer mode` from the top-right corner
